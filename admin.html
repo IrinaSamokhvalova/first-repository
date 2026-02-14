@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель опроса</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Админ-панель</h1>
+
+    <section class="card">
+      <h2>Настройки отправки на почту</h2>
+      <form id="settingsForm" class="inline-form">
+        <label for="creatorEmail">Email создателя:</label>
+        <input id="creatorEmail" type="email" required placeholder="creator@example.com" />
+        <button type="submit">Сохранить email</button>
+      </form>
+      <p id="settingsStatus" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Средние результаты (0 = Никогда, 1 = 1 раз/день, 2 = 2 раза/день)</h2>
+      <div id="avgChart" class="chart-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Экспорт</h2>
+      <button id="exportCsvBtn" type="button">Выгрузить все ответы в CSV</button>
+      <p id="exportStatus" class="status" aria-live="polite"></p>
+    </section>
+
+    <p class="admin-link"><a href="index.html">← Вернуться к опросу</a></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
